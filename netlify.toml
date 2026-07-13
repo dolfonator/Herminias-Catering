@@ -1,5 +1,5 @@
 # =================================================================
-# Netlify configuration — static site, no build step required.
+# Netlify configuration: static site, no build step required.
 # Drag-and-drop this folder into Netlify, or connect a Git repo.
 # =================================================================
 

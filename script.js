@@ -1,7 +1,7 @@
 /* =================================================================
-   HERMINIA'S FOOD CATERING — interactivity (vanilla JS, no dependencies)
+   HERMINIA'S FOOD CATERING: interactivity (vanilla JS, no dependencies)
    - mobile nav toggle + smart close
-   - scroll-reveal (IntersectionObserver) — light fade-up only
+   - scroll-reveal (IntersectionObserver): light fade-up only
    - active-section highlight in nav
    - today's-hours highlight
    - current year in footer
@@ -122,12 +122,12 @@
   var row = document.querySelector('.hours tr[data-day="' + today + '"]');
   if (row) {
     row.classList.add("today");
-    // non-colour cue for the highlighted row (WCAG 1.4.1) — the dot is decorative
+    // non-colour cue for the highlighted row (WCAG 1.4.1): the dot is decorative
     var th = row.querySelector("th");
     if (th && !th.querySelector(".sr-only")) {
       var tag = document.createElement("span");
       tag.className = "sr-only";
-      tag.textContent = "Today — ";
+      tag.textContent = "Today: ";
       th.insertBefore(tag, th.firstChild);
     }
   }
