@@ -1,7 +1,7 @@
 {
   "name": "Herminia's Food Catering",
   "short_name": "Herminia's",
-  "description": "Home-cooked Filipino buffets for every celebration — event catering across Quezon City & Metro Manila.",
+  "description": "Home-cooked Filipino buffets for every celebration, with event catering across Quezon City & Metro Manila.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#FFF8F1",

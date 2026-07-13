@@ -1,11 +1,11 @@
-# Asset licenses — (DEMO) Herminias-Business
+# Asset licenses: (DEMO) Herminias-Business
 
 All photography is stock from Unsplash, downloaded July 12, 2026, under the
 **Unsplash License** (free for commercial use, no attribution required, no resale
 of unmodified copies): https://unsplash.com/license
 
 **No client photos are used anywhere in this build.** Herminia's has no photo
-assets yet — every image below is a stock placeholder to be replaced with the
+assets yet; every image below is a stock placeholder to be replaced with the
 owner's real, permission-cleared photos before any indexed go-live.
 
 | File | Used for | Source (Unsplash photo page) |
@@ -25,7 +25,7 @@ owner's real, permission-cleared photos before any indexed go-live.
 ## Logo & icons
 
 `herminias-logo.png`, `icon-512.png`, `icon-192.png`, `apple-touch-icon.png`,
-`favicon-32.png`, `favicon-16.png`, `../favicon.ico` — original DDM-generated
+`favicon-32.png`, `favicon-16.png`, `../favicon.ico`: original DDM-generated
 monogram (ImageMagick, Georgia Bold Italic system font). **Provisional placeholder:
 the owner has no logo yet and must approve a real mark before launch.**
 
