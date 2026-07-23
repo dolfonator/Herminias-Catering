@@ -275,23 +275,20 @@ h2 em, .hero-title em { font-style: italic; color: var(--brand); }
 }
 .site-header.scrolled::before { opacity: 0; }
 .header-inner { display: flex; align-items: center; justify-content: space-between; height: var(--header-h); transition: height .3s ease; }
-.site-header.scrolled .header-inner { height: 60px; }
+.site-header.scrolled .header-inner { height: 68px; }
 
 /* brand lockup */
 .brand { display: flex; align-items: center; gap: .75rem; color: #fff; }
 .brand:hover { text-decoration: none; }
-/* cream plate behind the mark so the orange seal stays readable on dark
-   hero/footer surfaces (transparent PNG corners otherwise sink into black) */
+/* circular seal only — no outer plate; PNG already has transparent corners */
 .brand-logo {
   display: block;
-  width: 52px;
-  height: 52px;
+  width: 60px;
+  height: 60px;
   flex-shrink: 0;
-  border-radius: 12px;
-  background: var(--cream);
-  box-shadow:
-    0 2px 14px rgba(0,0,0,.32),
-    0 0 0 1px rgba(255,255,255,.22);
+  border-radius: 50%;
+  background: transparent;
+  box-shadow: 0 3px 14px rgba(0,0,0,.28);
   object-fit: cover;
 }
 .brand-name { font-family: var(--font-display); font-weight: 600; font-size: 1.35rem; line-height: 1; letter-spacing: -.02em; display: flex; flex-direction: column; gap: .2rem; transition: color .3s ease; }
@@ -541,6 +538,10 @@ h2 em, .hero-title em { font-style: italic; color: var(--brand); }
   background: var(--brand-deep);
   color: #fff;
 }
+/* kicker only (numeral + eyebrow); title/lead live in the left panel */
+.book-head { margin-bottom: var(--head-gap); }
+.book-head .eyebrow { margin-bottom: 0; }
+
 .book-grid { display: grid; grid-template-columns: 1fr 1.1fr; gap: var(--gap); align-items: stretch; }
 .book-copy {
   color: #fff7ef; background: var(--espresso-2);
@@ -548,12 +549,14 @@ h2 em, .hero-title em { font-style: italic; color: var(--brand); }
   border-top: var(--accent-bar) solid var(--brand);
   border-radius: var(--radius);
   padding: var(--panel-pad); box-shadow: var(--shadow-dark);
-  display: flex; flex-direction: column; justify-content: flex-start; gap: 1rem;
+  display: flex; flex-direction: column; justify-content: flex-start;
 }
-.book-copy h3 {
-  font-family: var(--font-display); font-weight: 600;
-  font-size: clamp(1.35rem, 1.1rem + .8vw, 1.7rem);
-  color: #fff; margin: 0; letter-spacing: -.015em;
+.book-copy h2 {
+  color: #fff;
+  margin: 0 0 1rem;
+  font-size: clamp(1.7rem, 1.2rem + 1.4vw, 2.35rem);
+  letter-spacing: -.02em;
+  text-wrap: balance;
 }
 .book-copy p { margin: 0; color: #f3e3d4; font-size: 1.02rem; line-height: 1.6; }
 .book-copy a { color: #fff; text-decoration: underline; text-underline-offset: 2px; }
@@ -590,9 +593,9 @@ h2 em, .hero-title em { font-style: italic; color: var(--brand); }
 .footer-inner { display: grid; grid-template-columns: 1.5fr 1fr 1.1fr; gap: 2rem; align-items: start; }
 .footer-brand { display: flex; align-items: center; gap: .95rem; }
 .footer-brand .brand-logo {
-  width: 54px;
-  height: 54px;
-  border-radius: 13px;
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
 }
 .footer-brand strong { font-family: var(--font-display); font-weight: 600; font-size: 1.2rem; display: block; color: #fff; letter-spacing: -.01em; }
 .footer-brand span { font-size: .82rem; color: #c8b9a9; }
