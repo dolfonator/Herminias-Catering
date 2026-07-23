@@ -119,7 +119,7 @@
 <header class="site-header" id="top">
   <div class="container header-inner">
     <a class="brand" href="#top" aria-label="Herminia's Food home">
-      <img src="/assets/herminias-logo.png" alt="Herminia's Food logo" width="46" height="46" class="brand-logo">
+      <img src="/assets/herminias-logo.png" alt="Herminia's Food logo" width="52" height="52" class="brand-logo">
       <span class="brand-name">Herminia's<span class="brand-sub">Food</span></span>
     </a>
 
@@ -589,69 +589,76 @@
 <!-- GET A QUOTE / INQUIRY (Formspree)                              -->
 <!-- ============================================================= -->
 <section class="section book section--brand" id="book">
-  <div class="container book-grid">
-    <div class="book-copy reveal">
+  <div class="container">
+    <div class="section-head reveal">
       <span class="section-num" aria-hidden="true">08</span>
       <p class="eyebrow">Get a quote</p>
       <h2>Let's plan your <em>handaan</em>.</h2>
-      <p>Tell us your event date, headcount and occasion. We'll reply within 24 hours with a menu suggestion and per-head quote. For quick questions, call or Viber Miggy at <a href="tel:+639457061487">0945 706 1487</a>.</p>
-      <ul class="about-tags">
-        <li>Weddings</li><li>Debuts</li><li>Corporate</li><li>House parties</li>
-      </ul>
+      <p class="section-lead">Tell us your event date, headcount and occasion. We'll reply within 24 hours with a menu suggestion and per-head quote.</p>
     </div>
 
-    <!-- Formspree: replace YOUR_FORM_ID with the ID from your form at
-         https://formspree.io  (Dashboard → New form → copy the ID after /f/).
-         Until that's set, submissions will not be delivered. -->
-    <form name="inquiry" method="POST" action="https://formspree.io/f/YOUR_FORM_ID" class="book-form reveal">
-      <input type="hidden" name="_subject" value="New catering inquiry from demo-herminias.netlify.app">
-      <input type="hidden" name="_next" value="https://demo-herminias.netlify.app/thanks.html">
-      <p class="hp"><label>Don't fill this out: <input name="_gotcha" tabindex="-1" autocomplete="off"></label></p>
+    <div class="book-grid">
+      <div class="book-copy reveal">
+        <h3>Prefer to talk it through?</h3>
+        <p>For quick questions, call or Viber Miggy at <a href="tel:+639457061487">0945 706 1487</a>. Or send the form and we'll come back with a package suggestion tailored to your occasion.</p>
+        <ul class="about-tags">
+          <li>Weddings</li><li>Debuts</li><li>Corporate</li><li>House parties</li>
+        </ul>
+      </div>
 
-      <div class="field">
-        <label for="name">Name</label>
-        <input id="name" name="name" type="text" required autocomplete="name">
-      </div>
-      <div class="field-row">
+      <!-- Formspree: replace YOUR_FORM_ID with the ID from your form at
+           https://formspree.io  (Dashboard → New form → copy the ID after /f/).
+           Until that's set, submissions will not be delivered. -->
+      <form name="inquiry" method="POST" action="https://formspree.io/f/YOUR_FORM_ID" class="book-form reveal">
+        <input type="hidden" name="_subject" value="New catering inquiry from demo-herminias.netlify.app">
+        <input type="hidden" name="_next" value="https://demo-herminias.netlify.app/thanks.html">
+        <p class="hp"><label>Don't fill this out: <input name="_gotcha" tabindex="-1" autocomplete="off"></label></p>
+
         <div class="field">
-          <label for="email">Email</label>
-          <input id="email" name="email" type="email" required autocomplete="email">
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" required autocomplete="name">
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" required autocomplete="email">
+          </div>
+          <div class="field">
+            <label for="phone">Mobile <span class="muted">(optional)</span></label>
+            <input id="phone" name="phone" type="tel" autocomplete="tel" inputmode="tel">
+          </div>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label for="date">Event date</label>
+            <input id="date" name="date" type="date" required>
+          </div>
+          <div class="field">
+            <label for="guests">Estimated guests</label>
+            <input id="guests" name="guests" type="number" min="1" inputmode="numeric" placeholder="e.g. 100" required>
+          </div>
         </div>
         <div class="field">
-          <label for="phone">Mobile <span class="muted">(optional)</span></label>
-          <input id="phone" name="phone" type="tel" autocomplete="tel" inputmode="tel">
+          <label for="event-type">Event type</label>
+          <select id="event-type" name="event_type" required>
+            <option value="" selected disabled>Choose one…</option>
+            <option>Wedding</option>
+            <option>Debut</option>
+            <option>Birthday</option>
+            <option>Christening</option>
+            <option>Corporate / office event</option>
+            <option>Fiesta / handaan</option>
+            <option>Other</option>
+          </select>
         </div>
-      </div>
-      <div class="field-row">
         <div class="field">
-          <label for="date">Event date</label>
-          <input id="date" name="date" type="date" required>
+          <label for="message">Anything else? <span class="muted">(optional)</span></label>
+          <textarea id="message" name="message" rows="4" placeholder="Venue, menu requests, theme, add-on stations…"></textarea>
         </div>
-        <div class="field">
-          <label for="guests">Estimated guests</label>
-          <input id="guests" name="guests" type="number" min="1" inputmode="numeric" placeholder="e.g. 100" required>
-        </div>
-      </div>
-      <div class="field">
-        <label for="event-type">Event type</label>
-        <select id="event-type" name="event_type" required>
-          <option value="" selected disabled>Choose one…</option>
-          <option>Wedding</option>
-          <option>Debut</option>
-          <option>Birthday</option>
-          <option>Christening</option>
-          <option>Corporate / office event</option>
-          <option>Fiesta / handaan</option>
-          <option>Other</option>
-        </select>
-      </div>
-      <div class="field">
-        <label for="message">Anything else? <span class="muted">(optional)</span></label>
-        <textarea id="message" name="message" rows="4" placeholder="Venue, menu requests, theme, add-on stations…"></textarea>
-      </div>
-      <button type="submit" class="btn btn-primary btn-lg btn-block">Request my quote</button>
-      <p class="form-note">We'll reply by email or phone within 24 hours. No spam, ever.</p>
-    </form>
+        <button type="submit" class="btn btn-primary btn-lg btn-block">Request my quote</button>
+        <p class="form-note">We'll reply by email or phone within 24 hours. No spam, ever.</p>
+      </form>
+    </div>
   </div>
 </section>
 </main>
@@ -662,7 +669,7 @@
 <footer class="site-footer">
   <div class="container footer-inner">
     <div class="footer-brand">
-      <img src="/assets/herminias-logo.png" alt="Herminia's Food logo" width="48" height="48">
+      <img src="/assets/herminias-logo.png" alt="Herminia's Food logo" width="54" height="54" class="brand-logo">
       <div>
         <strong>Herminia's Food</strong>
         <span>Leaving a legacy of home-cooked comfort, crafted through decades of experience.</span>
