@@ -450,15 +450,6 @@ h2 em, .hero-title em { font-style: italic; color: var(--brand); }
   margin: 1.1rem auto 0;
 }
 
-.flavors-head .flavor-preview { margin-bottom: 1.1rem; }
-.flavor-preview { display: flex; justify-content: center; gap: .55rem; margin-bottom: 1.3rem; }
-.flavor-dot { width: 13px; height: 13px; border-radius: 50%; box-shadow: 0 0 0 3px rgba(20,13,8,.4); }
-.flavor-dot--original  { background: radial-gradient(circle at 32% 28%, #FBD79A, #C97A2B 82%); }
-.flavor-dot--soy       { background: radial-gradient(circle at 32% 28%, #D9AE6C, #6B4423 82%); }
-.flavor-dot--yangnyeom { background: radial-gradient(circle at 32% 28%, #F27A44, #A11C0B 82%); }
-.flavor-dot--buffalo   { background: radial-gradient(circle at 32% 28%, #E08556, #7A2810 82%); }
-.flavor-dot--cheese    { background: radial-gradient(circle at 32% 28%, #FBF0CB, #E3C36B 82%); }
-
 .flavor-grid { display: grid; grid-template-columns: repeat(5,1fr); gap: var(--gap); }
 .flavor-card {
   background: var(--espresso-2); border: 1px solid var(--line-dark); border-radius: var(--radius);
@@ -466,22 +457,8 @@ h2 em, .hero-title em { font-style: italic; color: var(--brand); }
   transition: transform .2s ease, border-color .2s ease;
 }
 .flavor-card:hover { transform: translateY(-4px); border-color: rgba(143,168,136,.5); }
-.flavor-card h3 { color: #fff; margin-bottom: .35em; }
+.flavor-card h3 { color: #fff; margin: 0 0 .45em; }
 .flavor-card p { font-size: .92rem; color: #c8b9a9; margin: 0; line-height: 1.5; }
-
-.flavor-swatch {
-  display: block;
-  width: 52px;
-  height: 52px;
-  margin-bottom: 1.1rem;
-  border-radius: 42% 58% 60% 40% / 45% 45% 55% 55%;
-  box-shadow: inset 0 -6px 10px rgba(0,0,0,.22), 0 6px 14px rgba(0,0,0,.3);
-}
-.flavor-swatch--original  { background: radial-gradient(circle at 32% 26%, #FBD79A, #C97A2B 82%); }
-.flavor-swatch--soy       { background: radial-gradient(circle at 32% 26%, #D9AE6C, #6B4423 82%); }
-.flavor-swatch--yangnyeom { background: radial-gradient(circle at 32% 26%, #F27A44, #A11C0B 82%); }
-.flavor-swatch--buffalo   { background: radial-gradient(circle at 32% 26%, #E08556, #7A2810 82%); }
-.flavor-swatch--cheese    { background: radial-gradient(circle at 32% 26%, #FBF0CB, #E3C36B 82%); }
 
 /* ---------- menu ---------- */
 .menu { background: var(--cream-2); }
@@ -1122,18 +1099,13 @@ h2 em, .hero-title em { font-style: italic; color: var(--brand); }
   color: var(--sage);
 }
 
-/* script accents ONLY: tagline (2–4 rules total for --font-script) */
+/* script accents: About tagline only (hero location line is plain) */
 .script-tagline {
   font-family: var(--font-script);
   font-weight: 400;
   letter-spacing: .01em;
   text-transform: none;
   line-height: 1.15;
-}
-.hero-rating .script-tagline {
-  font-family: var(--font-script);
-  font-size: 1.35rem;
-  color: #fdeee2;
 }
 .about-tagline.script-tagline {
   font-family: var(--font-script);
