@@ -296,10 +296,11 @@ h2 em, .hero-title em { font-style: italic; color: var(--brand); }
 .site-header.scrolled .brand-logo {
   box-shadow: 0 3px 14px rgba(0,0,0,.28);
 }
-/* dark contexts (hero header + footer): thin light ring + tight drop so seal edge stays crisp */
+/* dark contexts (hero header + footer): clean soft grounding shadow, NO ring —
+   the solid orange seal already reads crisp on dark; a light ring looked like a gray plate */
 .site-header:not(.scrolled) .brand-logo,
 .footer-brand .brand-logo {
-  box-shadow: 0 0 0 1.5px rgba(255,255,255,.4), 0 2px 8px rgba(0,0,0,.4);
+  box-shadow: 0 6px 18px rgba(0,0,0,.45);
 }
 .brand-name { font-family: var(--font-display); font-weight: 600; font-size: 1.35rem; line-height: 1; letter-spacing: -.02em; display: flex; flex-direction: column; gap: .2rem; transition: color .3s ease; }
 .brand-sub { font-family: var(--font-head); font-size: .6rem; font-weight: 700; letter-spacing: .22em; text-transform: uppercase; color: var(--sage); transition: color .3s ease; }
@@ -552,14 +553,17 @@ h2 em, .hero-title em { font-style: italic; color: var(--brand); }
 .book-head { margin-bottom: var(--head-gap); }
 .book-head .eyebrow { margin-bottom: 0; }
 
-.book-grid { display: grid; grid-template-columns: 1fr 1.1fr; gap: var(--gap); align-items: stretch; }
+/* equal columns so the seam between the two panels sits dead-centre under the "08" kicker;
+   align-items: stretch keeps the dark copy panel the same height as the tall form — the
+   panel is filled with supporting points + bottom-pinned tags so it reads full, not empty */
+.book-grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--gap); align-items: stretch; }
 .book-copy {
   color: #fff7ef; background: var(--espresso-2);
   border: 1px solid rgba(255,255,255,.14);
   border-top: var(--accent-bar) solid var(--brand);
   border-radius: var(--radius);
   padding: var(--panel-pad); box-shadow: var(--shadow-dark);
-  display: flex; flex-direction: column; justify-content: center;
+  display: flex; flex-direction: column; justify-content: flex-start;
 }
 .book-copy h2 {
   color: #fff;
@@ -570,9 +574,23 @@ h2 em, .hero-title em { font-style: italic; color: var(--brand); }
 }
 .book-copy p { margin: 0; color: #f3e3d4; font-size: 1.02rem; line-height: 1.6; }
 .book-copy a { color: #fff; text-decoration: underline; text-underline-offset: 2px; }
+/* supporting reassurance points — fill the tall panel with substance, not empty space */
+.book-copy .book-points {
+  list-style: none; margin: var(--space-5) 0 0; padding: 0;
+  display: flex; flex-direction: column; gap: .85rem;
+}
+.book-copy .book-points li {
+  position: relative; padding-left: 1.85rem;
+  color: #f3e3d4; font-size: 1rem; line-height: 1.45;
+}
+.book-copy .book-points li::before {
+  content: "✓"; position: absolute; left: 0; top: 0;
+  color: var(--brand); font-weight: 700;
+}
 .book-copy .about-tags {
   border-top-color: rgba(255,255,255,.2);
   padding-top: var(--space-5);
+  margin-top: auto; /* pin tags to the bottom edge of the equal-height panel */
 }
 .book-copy .about-tags li { color: #f3e3d4; border-color: rgba(255,255,255,.28); }
 .book-form { background: var(--panel); border-radius: var(--radius); padding: var(--panel-pad); box-shadow: var(--shadow-lg); }
