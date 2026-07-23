@@ -288,8 +288,18 @@ h2 em, .hero-title em { font-style: italic; color: var(--brand); }
   flex-shrink: 0;
   border-radius: 50%;
   background: transparent;
-  box-shadow: 0 3px 14px rgba(0,0,0,.28);
+  /* tightened base shadow — wide dark halo murks the seal edge on dark bg */
+  box-shadow: 0 2px 8px rgba(0,0,0,.2);
   object-fit: cover;
+}
+/* cream / scrolled header: soft lift (clean over light bg) */
+.site-header.scrolled .brand-logo {
+  box-shadow: 0 3px 14px rgba(0,0,0,.28);
+}
+/* dark contexts (hero header + footer): thin light ring + tight drop so seal edge stays crisp */
+.site-header:not(.scrolled) .brand-logo,
+.footer-brand .brand-logo {
+  box-shadow: 0 0 0 1.5px rgba(255,255,255,.4), 0 2px 8px rgba(0,0,0,.4);
 }
 .brand-name { font-family: var(--font-display); font-weight: 600; font-size: 1.35rem; line-height: 1; letter-spacing: -.02em; display: flex; flex-direction: column; gap: .2rem; transition: color .3s ease; }
 .brand-sub { font-family: var(--font-head); font-size: .6rem; font-weight: 700; letter-spacing: .22em; text-transform: uppercase; color: var(--sage); transition: color .3s ease; }
@@ -549,7 +559,7 @@ h2 em, .hero-title em { font-style: italic; color: var(--brand); }
   border-top: var(--accent-bar) solid var(--brand);
   border-radius: var(--radius);
   padding: var(--panel-pad); box-shadow: var(--shadow-dark);
-  display: flex; flex-direction: column; justify-content: flex-start;
+  display: flex; flex-direction: column; justify-content: center;
 }
 .book-copy h2 {
   color: #fff;
@@ -562,7 +572,6 @@ h2 em, .hero-title em { font-style: italic; color: var(--brand); }
 .book-copy a { color: #fff; text-decoration: underline; text-underline-offset: 2px; }
 .book-copy .about-tags {
   border-top-color: rgba(255,255,255,.2);
-  margin: auto 0 0; /* pin tags to the bottom of the tall panel */
   padding-top: var(--space-5);
 }
 .book-copy .about-tags li { color: #f3e3d4; border-color: rgba(255,255,255,.28); }
@@ -622,6 +631,10 @@ h2 em, .hero-title em { font-style: italic; color: var(--brand); }
   .site-header::before { opacity: 0; }
   .site-header .brand, .site-header.scrolled .brand { color: var(--ink); }
   .site-header .brand-sub { color: var(--brand-dark); }
+  /* mobile header is cream even when :not(.scrolled) — use soft lift, not dark light-ring */
+  .site-header:not(.scrolled) .brand-logo {
+    box-shadow: 0 3px 14px rgba(0,0,0,.28);
+  }
   .site-header.scrolled .header-inner { height: var(--header-h); }
   .nav-toggle span, .site-header.scrolled .nav-toggle span { background: var(--ink); }
   .nav {
