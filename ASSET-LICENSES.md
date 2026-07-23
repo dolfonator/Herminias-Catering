@@ -25,9 +25,10 @@ owner's real, permission-cleared photos before any indexed go-live.
 ## Logo & icons
 
 `herminias-logo.png`, `icon-512.png`, `icon-192.png`, `apple-touch-icon.png`,
-`favicon-32.png`, `favicon-16.png`, `../favicon.ico`: original DDM-generated
-monogram (ImageMagick, Georgia Bold Italic system font). **Provisional placeholder:
-the owner has no logo yet and must approve a real mark before launch.**
+`favicon-32.png`, `favicon-16.png`, `../favicon.ico`: client's official logo mark,
+extracted from the client-supplied Partnership Deck PDF (their own asset, provided
+for this demo); regenerated to all icon/favicon sizes via ImageMagick. **Not a
+DDM-generated placeholder; this is the client's real official mark.**
 
 ## Template-photo removal confirmation
 

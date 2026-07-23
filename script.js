@@ -1,5 +1,5 @@
 /* =================================================================
-   HERMINIA'S FOOD CATERING: interactivity (vanilla JS, no dependencies)
+   HERMINIA'S FOOD: interactivity (vanilla JS, no dependencies)
    - mobile nav toggle + smart close
    - scroll-reveal (IntersectionObserver): light fade-up only
    - active-section highlight in nav
