@@ -280,7 +280,9 @@ h2 em, .hero-title em { font-style: italic; color: var(--brand); }
 /* brand lockup */
 .brand { display: flex; align-items: center; gap: .75rem; color: #fff; }
 .brand:hover { text-decoration: none; }
-/* circular seal only — no outer plate; PNG already has transparent corners */
+/* circular seal — cream backing is baked into the PNG (behind the transparent line-art,
+   clipped to the orange rim), so the seal reads crisp on ANY background. One consistent
+   soft shadow for lift across every context — no per-state shadow hacks needed. */
 .brand-logo {
   display: block;
   width: 60px;
@@ -288,19 +290,8 @@ h2 em, .hero-title em { font-style: italic; color: var(--brand); }
   flex-shrink: 0;
   border-radius: 50%;
   background: transparent;
-  /* tightened base shadow — wide dark halo murks the seal edge on dark bg */
-  box-shadow: 0 2px 8px rgba(0,0,0,.2);
+  box-shadow: 0 3px 12px rgba(0,0,0,.28);
   object-fit: cover;
-}
-/* cream / scrolled header: soft lift (clean over light bg) */
-.site-header.scrolled .brand-logo {
-  box-shadow: 0 3px 14px rgba(0,0,0,.28);
-}
-/* dark contexts (hero header + footer): clean soft grounding shadow, NO ring —
-   the solid orange seal already reads crisp on dark; a light ring looked like a gray plate */
-.site-header:not(.scrolled) .brand-logo,
-.footer-brand .brand-logo {
-  box-shadow: 0 6px 18px rgba(0,0,0,.45);
 }
 .brand-name { font-family: var(--font-display); font-weight: 600; font-size: 1.35rem; line-height: 1; letter-spacing: -.02em; display: flex; flex-direction: column; gap: .2rem; transition: color .3s ease; }
 .brand-sub { font-family: var(--font-head); font-size: .6rem; font-weight: 700; letter-spacing: .22em; text-transform: uppercase; color: var(--sage); transition: color .3s ease; }
@@ -649,10 +640,6 @@ h2 em, .hero-title em { font-style: italic; color: var(--brand); }
   .site-header::before { opacity: 0; }
   .site-header .brand, .site-header.scrolled .brand { color: var(--ink); }
   .site-header .brand-sub { color: var(--brand-dark); }
-  /* mobile header is cream even when :not(.scrolled) — use soft lift, not dark light-ring */
-  .site-header:not(.scrolled) .brand-logo {
-    box-shadow: 0 3px 14px rgba(0,0,0,.28);
-  }
   .site-header.scrolled .header-inner { height: var(--header-h); }
   .nav-toggle span, .site-header.scrolled .nav-toggle span { background: var(--ink); }
   .nav {
