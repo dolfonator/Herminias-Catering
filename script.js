@@ -38,6 +38,22 @@
     });
   }
 
+  /* ---- brand → back to top of hero ----
+     STANDARD (every DDM site): clicking the header logo or title returns to
+     the top of the hero. The href="#top" anchor alone is a no-op because it
+     targets the fixed header (always "in view"), so scroll the window
+     explicitly. Honours reduced-motion and closes the mobile nav if open. */
+  var brand = document.querySelector(".site-header .brand");
+  if (brand) {
+    brand.addEventListener("click", function (e) {
+      e.preventDefault();
+      var reduce = window.matchMedia &&
+        window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      window.scrollTo({ top: 0, behavior: reduce ? "auto" : "smooth" });
+      closeNav();
+    });
+  }
+
   /* ---- demo banner offset (keeps the fixed header below the sticky
      "unofficial concept demo" bar; height varies with text wrap) ---- */
   var demoBanner = document.querySelector(".demo-banner");
